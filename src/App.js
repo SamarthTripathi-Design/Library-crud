@@ -1,23 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import Nav from "./Nav.js";
+import List from "./List";
+import AddBooks from "./AddBooks";
+import axios from "axios";
+import React, { useEffect, useState } from "react";
 
 function App() {
+  const [books, setBooks] = useState([]);
+
+  useEffect(() => {
+    getBooks();
+  }, []);
+
+  const getBooks = async () => {
+    const url = "http://localhost:3000/books";
+    await axios.get(url).then((response) => {
+      setBooks(response);
+    });
+    // catch((errors) => {
+    //   console.log(errors);
+  };
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Nav />
+      <div className="app-body">
+        <List books={books} />
+        <AddBooks />
+      </div>
     </div>
   );
 }

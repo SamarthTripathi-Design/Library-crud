@@ -1,0 +1,18 @@
+{
+  "books": [
+    {
+      "title": "Origins",
+      "author": "Dan Brown",
+      "genre": "Medical",
+      "summary": "The first new laj",
+      "id": 1
+    },
+    {
+      "title": "Harri",
+      "author": "1224",
+      "genre": "3214",
+      "summary": "asfsa",
+      "id": 2
+    }
+  ]
+}

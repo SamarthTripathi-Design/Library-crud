@@ -1,38 +1,118 @@
-.App {
-  text-align: center;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.nav {
+  display: flex;
+  background-color: black;
+  color: white;
+  height: 60px;
+  padding: 10px;
+  position: sticky;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.card {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid grey;
+  min-width: 300px;
+  max-width: 350px;
+  padding: 10px;
+  min-height: 200px;
+  margin: 20px;
+  transition: all 1s;
+}
+
+.card:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+.card-title {
+  margin-bottom: 20px;
+}
+
+.card-desc {
+  width: 100%;
+  margin-bottom: 20px;
+  /* display: flex;
+  flex-direction: column; */
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.card-summary {
+  width: 100%;
+  justify-content: flex-start;
+  margin: 10px 0;
+  opacity: 0.8;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.card-buttons {
+  margin-top: 20px;
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+}
+
+.btn {
+  margin-right: 20px;
+  font-size: 1rem;
+  padding: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+
+  border: 1px solid black;
+}
+
+.btn-blue {
+  background-color: cornflowerblue;
+  color: aliceblue;
+}
+
+.btn-red {
+  background-color: brown;
+  color: aliceblue;
+}
+
+.list {
+  display: flex;
+  flex: 0.9;
+  padding-left: 30px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+.app-body {
+  display: flex;
+}
+
+.addbooks {
+  /* display: flex;
+  flex: 0.3;
+  flex-direction: column; */
+  margin-top: 30px;
+  /* background-color: aquamarine; */
+}
+
+.book-headings {
+  margin-bottom: 20px;
+}
+
+.addbook-btn {
+  margin-top: 20px;
+  width: 100px;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: darkolivegreen;
+  color: aliceblue;
+}
+
+.addBooks-input {
+  height: 25px;
+  width: 300px;
 }
